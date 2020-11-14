@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [not linux]
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
 
