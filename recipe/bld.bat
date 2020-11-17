@@ -9,9 +9,6 @@ cmake -G "Ninja" ^
       -DBUILD_SHARED_LIBS=ON ^
       ..
 if errorlevel 1 exit 1
-
-ninja
-if errorlevel 1 exit 1
 cd ..
 
 mkdir build-static
@@ -25,6 +22,4 @@ cmake -G "Ninja" ^
       -DBUILD_SHARED_LIBS=OFF ^
       ..
 if errorlevel 1 exit 1
-
-ninja
-if errorlevel 1 exit 1
+cd ..
