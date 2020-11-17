@@ -44,6 +44,9 @@ outputs:
         - cmake
         - {{ compiler('c') }}
         - ninja
+      host:
+        - openssl
+        - libopenssl-static
     test:
       commands:
         - test ! -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
