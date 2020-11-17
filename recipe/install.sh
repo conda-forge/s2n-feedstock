@@ -7,5 +7,4 @@ then
 else
     cd build-shared
     ninja install
-    rm -rf ${PREFIX}/lib/*.a
 fi
