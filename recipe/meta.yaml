@@ -22,6 +22,7 @@ requirements:
     - ninja
   host:
     - openssl
+    - libopenssl-static
 
 outputs:
   - name: s2n
@@ -43,8 +44,6 @@ outputs:
         - cmake
         - {{ compiler('c') }}
         - ninja
-      host:
-        - libopenssl-static
     test:
       commands:
         - test ! -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
