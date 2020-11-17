@@ -50,6 +50,7 @@ outputs:
       host:
         - openssl
         - libopenssl-static
+        - s2n ={{ version }}
     test:
       commands:
         - test ! -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
