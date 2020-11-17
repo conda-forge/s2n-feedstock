@@ -15,14 +15,16 @@ build:
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
 
+requirements:
+  build:
+    - cmake
+    - {{ compiler('c') }}
+    - ninja
+
 outputs:
   - name: s2n
     script: install.sh  # [unix]
     requirements:
-      build:
-        - cmake
-        - {{ compiler('c') }}
-        - ninja
       host:
         - openssl
     test:
@@ -33,10 +35,6 @@ outputs:
   - name: s2n-static
     script: install.sh  # [unix]
     requirements:
-      build:
-        - cmake
-        - {{ compiler('c') }}
-        - ninja
       host:
         - libopenssl-static
     test:
