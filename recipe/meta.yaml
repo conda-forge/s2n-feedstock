@@ -20,6 +20,9 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - ninja
+  host:
+    - openssl
+    - libopenssl-static
 
 outputs:
   - name: s2n
