@@ -10,7 +10,7 @@ source:
   sha256: ace34f0546f50551ee2124d25f8de3b7b435ddb1b4fbf640ea0dcb0f1c677451
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
@@ -26,6 +26,7 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/lib/libs2n.a  # [unix]
     - test -f $PREFIX/include/s2n.h  # [unix]
 
 about:
@@ -38,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - xhochy
+    - davidbrochart
