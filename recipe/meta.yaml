@@ -15,20 +15,35 @@ build:
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
 
-requirements:
-  build:
-    - cmake
-    - {{ compiler('c') }}
-    - ninja
-  host:
-    - openssl
-    - libopenssl-static
-
-test:
-  commands:
-    - test -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
-    - test -f $PREFIX/lib/libs2n.a  # [unix]
-    - test -f $PREFIX/include/s2n.h  # [unix]
+outputs:
+  - name: s2n
+    script: install.sh  # [unix]
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - ninja
+      host:
+        - openssl
+    test:
+      commands:
+        - test -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
+        - test ! -f $PREFIX/lib/libs2n.a  # [unix]
+        - test -f $PREFIX/include/s2n.h  # [unix]
+  - name: s2n-static
+    script: install.sh  # [unix]
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - ninja
+      host:
+        - libopenssl-static
+    test:
+      commands:
+        - test ! -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
+        - test -f $PREFIX/lib/libs2n.a  # [unix]
+        - test -f $PREFIX/include/s2n.h  # [unix]
 
 about:
   home: https://github.com/awslabs/s2n
