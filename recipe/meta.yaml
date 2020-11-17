@@ -22,6 +22,7 @@ requirements:
     - ninja
   host:
     - openssl
+    - libopenssl-static
 
 test:
   commands:
