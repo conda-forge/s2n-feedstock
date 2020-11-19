@@ -12,26 +12,23 @@ source:
 build:
   number: 1
   run_exports:
-    - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
-
-requirements:
-  build:
-    - cmake
-    - {{ compiler('c') }}
-    - ninja
-  host:
-    - openssl
-    - libopenssl-static
+   - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
 
 outputs:
   - name: s2n
-    script: install.sh  # [unix]
-    script: install.bat  # [win]
+    script: build-shared.sh  # [unix]
+    script: bld-shared.bat  # [win]
+    build:
+      activate_in_script: True
+      run_exports:
+        - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
     requirements:
       build:
         - cmake
         - {{ compiler('c') }}
         - ninja
+      host:
+        - openssl
     test:
       commands:
         - test -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
@@ -40,22 +37,21 @@ outputs:
         - if not exist %LIBRARY_BIN%\libs2n.dll (exit 1)  # [win]
         - if not exist %LIBRARY_LIB%\libs2n.lib (exit 1)  # [win]
   - name: s2n-static
-    script: install.sh  # [unix]
-    script: install.bat  # [win]
+    script: build-static.sh  # [unix]
+    script: bld-static.bat  # [win]
+    build:
+      activate_in_script: True
     requirements:
       build:
         - cmake
         - {{ compiler('c') }}
         - ninja
       host:
-        - openssl
         - libopenssl-static
-        - s2n ={{ version }}
+        - {{ pin_subpackage("s2n", exact=True) }}
     test:
       commands:
-        - test ! -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
         - test -f $PREFIX/lib/libs2n.a  # [unix]
-        - test -f $PREFIX/include/s2n.h  # [unix]
         - if not exist %LIBRARY_BIN%\libs2n.dll (exit 1)  # [win]
         - if not exist %LIBRARY_LIB%\libs2n.lib (exit 1)  # [win]
 
