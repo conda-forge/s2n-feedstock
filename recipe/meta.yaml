@@ -34,8 +34,6 @@ outputs:
         - test -f $PREFIX/lib/libs2n${SHLIB_EXT}  # [unix]
         - test ! -f $PREFIX/lib/libs2n.a  # [unix]
         - test -f $PREFIX/include/s2n.h  # [unix]
-        - if not exist %LIBRARY_BIN%\libs2n.dll (exit 1)  # [win]
-        - if not exist %LIBRARY_LIB%\libs2n.lib (exit 1)  # [win]
   - name: s2n-static
     script: build-static.sh  # [unix]
     script: bld-static.bat  # [win]
@@ -52,8 +50,6 @@ outputs:
     test:
       commands:
         - test -f $PREFIX/lib/libs2n.a  # [unix]
-        - if not exist %LIBRARY_BIN%\libs2n.dll (exit 1)  # [win]
-        - if not exist %LIBRARY_LIB%\libs2n.lib (exit 1)  # [win]
 
 about:
   home: https://github.com/awslabs/s2n
