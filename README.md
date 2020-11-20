@@ -75,6 +75,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-s2n-green.svg)](https://anaconda.org/conda-forge/s2n) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/s2n.svg)](https://anaconda.org/conda-forge/s2n) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/s2n.svg)](https://anaconda.org/conda-forge/s2n) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/s2n.svg)](https://anaconda.org/conda-forge/s2n) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-s2n--static-green.svg)](https://anaconda.org/conda-forge/s2n-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/s2n-static.svg)](https://anaconda.org/conda-forge/s2n-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/s2n-static.svg)](https://anaconda.org/conda-forge/s2n-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/s2n-static.svg)](https://anaconda.org/conda-forge/s2n-static) |
 
 Installing s2n
 ==============
@@ -85,10 +86,10 @@ Installing `s2n` from the `conda-forge` channel can be achieved by adding `conda
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `s2n` can be installed with:
+Once the `conda-forge` channel has been enabled, `s2n, s2n-static` can be installed with:
 
 ```
-conda install s2n
+conda install s2n s2n-static
 ```
 
 It is possible to list all of the versions of `s2n` available on your platform with:
@@ -161,5 +162,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@davidbrochart](https://github.com/davidbrochart/)
 * [@xhochy](https://github.com/xhochy/)
 
