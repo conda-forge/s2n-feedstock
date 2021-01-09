@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: b60426faf62bc7d26dfd7a33abcfd252ed416d46a639c220be9f2f44ca5c22c2
+  patches:
+    - ppc64le_support.patch
 
 build:
   number: 0
