@@ -6,7 +6,7 @@ index 6199e5a7..a5e9104c 100644
  #define LOG2RADIX 6
  typedef uint64_t digit_t;  // Unsigned 64-bit digit
  typedef uint32_t hdigit_t; // Unsigned 32-bit digit
-+#elif defined(__ppc64le__)
++#elif defined(__powerpc64__)
 +// hmaarrfk: 2021/01/09
 +// Ok, it isn't really ARM64, but I'm going to fake it
 +// until upstream decides to support this correctly
