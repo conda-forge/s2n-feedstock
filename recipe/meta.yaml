@@ -10,8 +10,6 @@ source:
   sha256: a2d09943b8c99bbfa4a4352766fac1f81429cf5bdd63e6eeebaac1a77dc2b8a6
   patches:
     - ppc64le_support.patch
-    # https://github.com/aws/s2n-tls/pull/2710
-    - linker-flags-macos.patch
 
 build:
   number: 0
