@@ -1,5 +1,5 @@
 {% set name = "s2n" %}
-{% set version = "1.0.19" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 18ebcc8ac7601adec08bb2a90fdba0d5a2d5a366d56f10fcde61885be9d39b02
+  sha256: e094fd1f2044cfaeedb534ef1d7e4fd8745d8c07a247ce383cd8a6a5288e195c
   #patches:
   #- ppc64le_support.patch
 
