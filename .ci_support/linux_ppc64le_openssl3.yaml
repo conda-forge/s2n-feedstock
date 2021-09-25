@@ -3,7 +3,7 @@ c_compiler:
 c_compiler_version:
 - '9'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,12 +11,6 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 openssl:
-- 1.1.1
-pin_run_as_build:
-  openssl:
-    max_pin: x.x.x
+- '3'
 target_platform:
-- linux-64
-zip_keys:
-- - cdt_name
-  - docker_image
+- linux-ppc64le
