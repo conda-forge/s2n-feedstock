@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: b276d8b28cf9c2a6abf071a1055129af0ff4f606e5a5504546846c49105c1cf0
-  patches:
-    - 3264.patch
 
 build:
   number: 0
