@@ -1,5 +1,5 @@
 {% set name = "s2n" %}
-{% set version = "1.3.12" %}
+{% set version = "1.3.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2f71e4e430bc1a09f7d70042d7b6c53005c5bfb0a59128c80c5b038e13040d56
+  sha256: baddbbfa57eb5e58f3496d62e349fbe76ecb2bb4adc4968d7b6450785ff74711
 
 build:
   number: 0
