@@ -1,11 +1,11 @@
-About s2n
-=========
+About s2n-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/s2n-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/awslabs/s2n
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/s2n-feedstock/blob/main/LICENSE.txt)
 
 Summary: an implementation of the TLS/SSL protocols
 
