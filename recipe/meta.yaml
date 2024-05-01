@@ -1,5 +1,5 @@
 {% set name = "s2n" %}
-{% set version = "1.4.12" %}
+{% set version = "1.4.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d0769f27eb9e6b8fc98d3e8e3eb87ed71e10b08fade87893b293878d84faaceb
+  sha256: 8b0b36697963d6752e5a1b49e28e393605990d348edf1aef6f39c33164d45edb
 
 build:
   number: 0
@@ -27,6 +27,7 @@ outputs:
       build:
         - cmake
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - ninja
       host:
         - openssl
@@ -44,6 +45,7 @@ outputs:
       build:
         - cmake
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - ninja
       host:
         - libopenssl-static
