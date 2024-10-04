@@ -18,5 +18,7 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
 - '3'
+s2n:
+- 1.5.3
 target_platform:
 - osx-64
