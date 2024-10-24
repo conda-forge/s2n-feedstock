@@ -21,7 +21,7 @@ docker_image:
 openssl:
 - '3'
 s2n:
-- 1.5.4
+- 1.5.5
 target_platform:
 - linux-aarch64
 zip_keys:
