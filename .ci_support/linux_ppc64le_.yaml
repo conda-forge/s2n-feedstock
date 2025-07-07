@@ -17,6 +17,6 @@ docker_image:
 openssl:
 - '3'
 s2n:
-- 1.5.20
+- 1.5.21
 target_platform:
 - linux-ppc64le
