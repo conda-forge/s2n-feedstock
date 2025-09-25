@@ -17,6 +17,6 @@ docker_image:
 openssl:
 - '3'
 s2n:
-- 1.5.25
+- 1.5.26
 target_platform:
 - linux-64
