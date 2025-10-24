@@ -17,8 +17,8 @@ channel_targets:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
-- '3'
+- '3.5'
 s2n:
-- 1.5.26
+- 1.5.27
 target_platform:
 - osx-64
