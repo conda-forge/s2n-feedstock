@@ -19,6 +19,6 @@ macos_machine:
 openssl:
 - '3.5'
 s2n:
-- 1.5.27
+- 1.6.0
 target_platform:
 - osx-arm64
