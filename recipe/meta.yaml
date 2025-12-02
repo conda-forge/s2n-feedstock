@@ -17,8 +17,9 @@ build:
 
 outputs:
   - name: s2n
-    script: build-shared.sh  # [unix]
-    script: bld-shared.bat  # [win]
+    script: |-
+      build-shared.sh  # [unix]
+      bld-shared.bat  # [win]
     build:
       activate_in_script: true
       run_exports:
@@ -37,8 +38,9 @@ outputs:
         - test ! -f $PREFIX/lib/libs2n.a  # [unix]
         - test -f $PREFIX/include/s2n.h  # [unix]
   - name: s2n-static
-    script: build-static.sh  # [unix]
-    script: bld-static.bat  # [win]
+    script: |-
+      build-static.sh  # [unix]
+      bld-static.bat  # [win]
     build:
       activate_in_script: true
     requirements:
