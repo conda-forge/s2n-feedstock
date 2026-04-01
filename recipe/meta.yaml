@@ -1,16 +1,16 @@
 {% set name = "s2n" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/awslabs/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 850f001ea9b49d12a5ed5a9a4ada3c7aa042c0e9f2968604c457384adad31e83
+  url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 3ca5361dabd2b041ba6d8c3fe73d1bc5a721dc5f62bbf71838010d1eddaa0cfd
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
