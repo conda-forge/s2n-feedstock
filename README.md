@@ -66,31 +66,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `s2n, s2n-static` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install s2n s2n-static
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install s2n s2n-static
 ```
 
-It is possible to list all of the versions of `s2n` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add s2n s2n-static
+# for installing globally
+pixi global install s2n s2n-static
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `s2n` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search s2n --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search s2n --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search s2n --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -102,6 +144,8 @@ mamba repoquery whoneeds s2n --channel conda-forge
 # List dependencies of `s2n`:
 mamba repoquery depends s2n --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
